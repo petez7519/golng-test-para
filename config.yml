@@ -1,0 +1,28 @@
+version: 2.1
+
+executors:
+  go-executor:
+    docker:
+      - image: circleci/golang:1.17
+    working_directory: ~/go/src/github.com/your_username/your_project
+
+jobs:
+  test:
+    parallelism: 10
+    executor: go-executor
+    steps:
+      - checkout
+      - run:
+          name: Install Dependencies
+          command: go mod tidy
+      - run:
+          name: Run Tests
+          command: |
+            go test -run TestAddNumbers
+            go test -run TestMultiplyNumbers
+
+workflows:
+  version: 2
+  test:
+    jobs:
+      - test
