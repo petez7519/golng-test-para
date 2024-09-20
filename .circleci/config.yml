@@ -3,7 +3,7 @@ version: 2.1
 executors:
   go-executor:
     docker:
-      - image: circleci/golang:1.17
+      - image: circleci/golang:1.23
     working_directory: ~/go/src/github.com/petez7519/golng-test-para
 
 jobs:
