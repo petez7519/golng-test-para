@@ -1,4 +1,4 @@
-version: 2.1
+eversion: 2.1
 
 executors:
   go-executor:
