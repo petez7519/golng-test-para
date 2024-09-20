@@ -4,7 +4,7 @@ executors:
   go-executor:
     docker:
       - image: circleci/golang:1.17
-    working_directory: ~/go/src/github.com/your_username/your_project
+    working_directory: ~/go/src/github.com/petez7519/golng-test-para
 
 jobs:
   test:
